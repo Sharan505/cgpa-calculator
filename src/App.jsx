@@ -6,6 +6,9 @@ import SemTwo from './components/SemTwo.jsx';
 import SemThree from './components/SemThree.jsx';
 import SemFour from './components/SemFour.jsx';
 import SemFive from './components/SemFive.jsx';
+import SemSix from './components/SemSix.jsx';
+import SemSeven from './components/SemSeven.jsx';
+import SemEight from './components/SemEight.jsx';
 import ParticlesComponent from './components/ParticlesComponent.jsx';
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
         <Route path='/sem-three' element={<SemThree />} />
         <Route path='/sem-four' element={<SemFour />} />
         <Route path='/sem-five' element={<SemFive />} />
+        <Route path='/sem-six' element={<SemSix />} />
+        <Route path='/sem-seven' element={<SemSeven />} />
+        <Route path='/sem-eight' element={<SemEight />} />
       </Routes>
     </>
   );
