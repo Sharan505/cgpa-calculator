@@ -1,5 +1,6 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import Home from './components/Home.jsx';
 import SemOne from './components/SemOne.jsx';
 import SemTwo from './components/SemTwo.jsx';
@@ -12,21 +13,76 @@ import SemEight from './components/SemEight.jsx';
 import ParticlesComponent from './components/ParticlesComponent.jsx';
 
 function App() {
+  const location = useLocation();  // Use location for route-specific animations
+
   return (
     <>
-      <ParticlesComponent id="particlesBG"/>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/sem-one' element={<SemOne />} />
-        <Route path='/sem-two' element={<SemTwo />} />
-        <Route path='/sem-three' element={<SemThree />} />
-        <Route path='/sem-four' element={<SemFour />} />
-        <Route path='/sem-five' element={<SemFive />} />
-        <Route path='/sem-six' element={<SemSix />} />
-        <Route path='/sem-seven' element={<SemSeven />} />
-        <Route path='/sem-eight' element={<SemEight />} />
-      </Routes>
+      <ParticlesComponent id="particlesBG" />
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route path='/' element={
+              <PageWrapper>
+                <Home />
+              </PageWrapper>
+            }/>
+          <Route path='/sem-one' element={
+              <PageWrapper>
+                <SemOne />
+              </PageWrapper>
+            }/>
+          <Route path='/sem-two' element={
+              <PageWrapper>
+                <SemTwo />
+              </PageWrapper>
+            }/>
+          <Route path='/sem-three' element={
+              <PageWrapper>
+                <SemThree />
+              </PageWrapper>
+            }/>
+          <Route path='/sem-four' element={
+              <PageWrapper>
+                <SemFour />
+              </PageWrapper>
+            }/>
+          <Route path='/sem-five' element={
+              <PageWrapper>
+                <SemFive />
+              </PageWrapper>
+            }/>
+          <Route path='/sem-six' element={
+              <PageWrapper>
+                <SemSix />
+              </PageWrapper>
+            }/>
+          <Route path='/sem-seven' element={
+              <PageWrapper>
+                <SemSeven />
+              </PageWrapper>
+            }/>
+          <Route path='/sem-eight' element={
+              <PageWrapper>
+                <SemEight />
+              </PageWrapper>
+            }/>
+          
+        </Routes>
+      </AnimatePresence>
     </>
+  );
+}
+
+// PageWrapper component for animating the route transition
+function PageWrapper({ children }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0}}
+      animate={{ opacity: 1}}
+      exit={{ opacity: 1}}
+      transition={{ duration: 0.3 }}
+    >
+      {children}
+    </motion.div>
   );
 }
 
