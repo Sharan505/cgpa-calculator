@@ -130,7 +130,7 @@ function SemOne() {
               <input type="text" id="cp" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="freLab" className="col-6">FRE Lab br <strong> (60 ME 0P1)</strong></label>
+              <label htmlFor="freLab" className="col-6">FRE Lab <strong> (60 ME 0P1)</strong></label>
               <input type="text" id="freLab" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
