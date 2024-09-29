@@ -115,31 +115,31 @@ function SemOne() {
           <div className="col-md-3 col-sm-1"></div>
           <div className="col-md-6 col-sm-10">
             <div className="row mt-4 me-2">
-              <label htmlFor="pe" className="col-6">Professional English II (60 EN 002)</label>
+              <label htmlFor="pe" className="col-6">Professional English II <strong>(60 EN 002)</strong></label>
               <input type="text" id="pe" className="col-6 rounded border border-dark" />                            
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="mc" className="col-6">Integrals, Partial Differential Equations And Laplace Transform (60 MA 003)</label>
+              <label htmlFor="mc" className="col-6">Integrals, Partial Differential Equations And Laplace Transform <strong>(60 MA 003)</strong></label>
               <input type="text" id="mc" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="bee" className="col-6"> Basic Electrical and Electronics Engineering (60 EE 001)</label>
+              <label htmlFor="bee" className="col-6"> Basic Electrical and Electronics Engineering <br /> <strong> (60 EE 001)</strong></label>
               <input type="text" id="bee" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="pct" className="col-6">Physics for Computer Technology (60 PH 004)</label>
+              <label htmlFor="pct" className="col-6">Physics for Computer Technology <br /> <strong>(60 PH 004)</strong></label>
               <input type="text" id="pct" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="py" className="col-6">Python Programming (60 IT 001)</label>
+              <label htmlFor="py" className="col-6">Python Programming <br /> <strong>(60 IT 001)</strong></label>
               <input type="text" id="py" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="phyLab" className="col-6">Engineering Physics and Chemistry Laboratory (60 CP 0P2)</label>
+              <label htmlFor="phyLab" className="col-6">Engineering Physics and Chemistry Laboratory <br /> <strong>(60 CP 0P2)</strong></label>
               <input type="text" id="phyLab" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="pyLab" className="col-6">Python Programming Laboratory (60 IT 0P1)</label>
+              <label htmlFor="pyLab" className="col-6">Python Programming Laboratory <br /> <strong>(60 IT 0P1)</strong></label>
               <input type="text" id="pyLab" className="col-6 rounded border border-dark" />
             </div>
           </div>

@@ -122,19 +122,19 @@ function SemFive() {
           <div className="col-md-3 col-sm-1"></div>
           <div className="col-md-6 col-sm-10">
             <div className="row mt-4 me-2">
-              <label htmlFor="os" className="col-6">Operating Systems (60 IT 501)</label>
+              <label htmlFor="os" className="col-6">Operating Systems <strong>(60 IT 501)</strong></label>
               <input type="text" id="os" className="col-6 rounded border border-dark" />                            
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="cn" className="col-6">Computer Networks (60 IT 502)</label>
+              <label htmlFor="cn" className="col-6">Computer Networks <strong>(60 IT 502)</strong></label>
               <input type="text" id="cn" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="iot" className="col-6">Embedded Systems and IOT (60 IT 503)</label>
+              <label htmlFor="iot" className="col-6">Embedded Systems and IOT <strong>(60 IT 503)</strong></label>
               <input type="text" id="iot" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="dt" className="col-6">Design Thinking (60 IT 003)</label>
+              <label htmlFor="dt" className="col-6">Design Thinking <strong>(60 IT 003)</strong></label>
               <input type="text" id="dt" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
@@ -146,15 +146,15 @@ function SemFive() {
               <input type="text" id="oe" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="strt" className="col-6">Start-ups and Entrepreneurship (60 MY 003)</label>
+              <label htmlFor="strt" className="col-6">Start-ups and Entrepreneurship <strong>(60 MY 003)</strong></label>
               <input type="text" id="strt" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="osLab" className="col-6">OS Lab (60 IT 5P1)</label>
+              <label htmlFor="osLab" className="col-6">OS Lab <strong>(60 IT 5P1)</strong></label>
               <input type="text" id="osLab" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="cnLab" className="col-6">CN Lab (60 IT 5P2)</label>
+              <label htmlFor="cnLab" className="col-6">CN Lab <strong>(60 IT 5P2)</strong></label>
               <input type="text" id="cnLab" className="col-6 rounded border border-dark" />
             </div>
           </div>

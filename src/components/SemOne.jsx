@@ -110,31 +110,31 @@ function SemOne() {
           <div className="col-md-3 col-sm-1"></div>
           <div className="col-md-6 col-sm-10">
             <div className="row mt-4 me-2">
-              <label htmlFor="pe" className="col-6">Professional English I (60 EN 001)</label>
+              <label htmlFor="pe" className="col-6">Professional English I <strong>(60 EN 001)</strong></label>
               <input type="text" id="pe" className="col-6 rounded border border-dark" />                            
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="mc" className="col-6">Matrices and Calculus (60 MA 001)</label>
+              <label htmlFor="mc" className="col-6">Matrices and Calculus <br /> <strong> (60 MA 001)</strong></label>
               <input type="text" id="mc" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="ec" className="col-6">Engineering Chemistry (60 CH 004)</label>
+              <label htmlFor="ec" className="col-6">Engineering Chemistry <br /> <strong> (60 CH 004)</strong></label>
               <input type="text" id="ec" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="eg" className="col-6">Engineering Graphics (60 ME 002)</label>
+              <label htmlFor="eg" className="col-6">Engineering Graphics <br /> <strong> (60 ME 002)</strong></label>
               <input type="text" id="eg" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="cp" className="col-6">C Programming (60 CS 001)</label>
+              <label htmlFor="cp" className="col-6">C Programming <br /> <strong> (60 CS 001)</strong></label>
               <input type="text" id="cp" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="freLab" className="col-6">FRE Lab (60 ME 0P1)</label>
+              <label htmlFor="freLab" className="col-6">FRE Lab br <strong> (60 ME 0P1)</strong></label>
               <input type="text" id="freLab" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="cLab" className="col-6">CP Lab (60 CS 0P1)</label>
+              <label htmlFor="cLab" className="col-6">CP Lab <strong> (60 CS 0P1)</strong></label>
               <input type="text" id="cLab" className="col-6 rounded border border-dark" />
             </div>
           </div>

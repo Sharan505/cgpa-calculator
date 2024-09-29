@@ -120,23 +120,23 @@ function SemFour() {
           <div className="col-md-3 col-sm-1"></div>
           <div className="col-md-6 col-sm-10">
             <div className="row mt-4 me-2">
-              <label htmlFor="dm" className="col-6">Discrete Mathematics (60 MA 017)</label>
+              <label htmlFor="dm" className="col-6">Discrete Mathematics <br /> <strong>(60 MA 017)</strong></label>
               <input type="text" id="dm" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="daa" className="col-6">Design and Analysis of Algorithms (60 IT 002)</label>
+              <label htmlFor="daa" className="col-6">Design and Analysis of Algorithms <br /> <strong>(60 IT 002)</strong></label>
               <input type="text" id="daa" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="coa" className="col-6">Computer Organization and Architecture (60 IT 401)</label>
+              <label htmlFor="coa" className="col-6">Computer Organization and Architecture <br /> <strong>(60 IT 401)</strong></label>
               <input type="text" id="coa" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="dbms" className="col-6">Database Management Systems (60 IT402)</label>
+              <label htmlFor="dbms" className="col-6">Database Management Systems <strong>(60 IT402)</strong></label>
               <input type="text" id="dbms" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="wt" className="col-6">Web Technology (60 IT403)</label>
+              <label htmlFor="wt" className="col-6">Web Technology <br /> <strong>(60 IT403)</strong></label>
               <input type="text" id="wt" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
@@ -144,7 +144,7 @@ function SemFour() {
               <input type="text" id="oe" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="dbms-lab" className="col-6">Database Management Systems Laboratory (60 IT4P1)</label>
+              <label htmlFor="dbms-lab" className="col-6">Database Management Systems Laboratory <strong>(60 IT4P1)</strong></label>
               <input type="text" id="dbms-lab" className="col-6 rounded border border-dark" />
             </div>
           </div>
