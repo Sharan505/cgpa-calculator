@@ -9,6 +9,12 @@
 .bg-ksr{
     background-color: rgb(21, 0, 117);
 }
+.bg-ksr h2{
+    font-size: clamp(1rem, 5vw, 2rem);
+}
+.bg-ksr h4{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
 .icons{
     font-size: clamp(2rem, 1vw, 3rem);
     

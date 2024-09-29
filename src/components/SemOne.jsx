@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { SgpaContext } from './SgpaContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function SemOne() {
-  const [cgpa, setCgpa] = useState(null); 
+  const [sgpa, setSgpa] = useState(null); 
+  const [cgpa, setCgpa] = useState(null);
+  const { sgpaList, addSgpa } = useContext(SgpaContext);
+  const navigate = useNavigate();
+
   const gr = {
     'O': 10,
     'A+': 9,
@@ -55,12 +63,36 @@ function SemOne() {
     }
 
     if (totalCredits > 0) {
-      const calculatedCgpa = (totalPoints / totalCredits).toFixed(2);
-      setCgpa(calculatedCgpa);
+      const calculatedSgpa = (totalPoints / totalCredits).toFixed(2);
+      setSgpa(calculatedSgpa);
+      addSgpa(parseFloat(calculatedSgpa));
     } else {
-      setCgpa("Invalid input. Please enter valid grades.");
+      setSgpa("Invalid input. Please enter valid grades.");
     }
   }
+
+  function calculateCgpa() {
+    if (sgpaList.length === 0) {
+      return "No SGPAs calculated yet.";
+    }
+
+    const totalSgpa = sgpaList.reduce((acc, curr) => acc + curr, 0);
+    const cgpaValue = (totalSgpa / sgpaList.length).toFixed(2);
+    
+    setCgpa(cgpaValue); // Set the CGPA to display in the popover
+    return cgpaValue;
+  }
+
+  const nextSemPage = () => {
+    navigate("/sem-two");
+  }
+
+  useEffect(() => {
+    const popoverTrigger = document.querySelector('[data-bs-toggle="popover"]');
+    if (popoverTrigger) {
+      new window.bootstrap.Popover(popoverTrigger); // Initialize popover
+    }
+  }, [cgpa]); // Reinitialize when CGPA changes
 
   return (
     <section>
@@ -68,7 +100,7 @@ function SemOne() {
         <h2>K.S.Rangasamy College of Technology</h2>
         <h4>Department of Information Technology</h4>
       </nav>
-      <p className="text-center display-6 mt-4">CGPA Calculator (Semester 1)</p>
+      <p className="text-center display-6 mt-4">SGPA Calculator (Semester 1)</p>
       <p className="text-center">
         <strong>NOTE:</strong> Enter the Grade <strong>(in capital letters)</strong> correctly to the corresponding subject!
         <br />In case of arrears, Enter <strong>'U'</strong>
@@ -78,31 +110,31 @@ function SemOne() {
           <div className="col-md-3 col-sm-1"></div>
           <div className="col-md-6 col-sm-10">
             <div className="row mt-4 me-2">
-              <label htmlFor="pe" className="col-6">Professional English I</label>
+              <label htmlFor="pe" className="col-6">Professional English I (60 EN 001)</label>
               <input type="text" id="pe" className="col-6 rounded border border-dark" />                            
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="mc" className="col-6">Matrices and Calculus</label>
+              <label htmlFor="mc" className="col-6">Matrices and Calculus (60 MA 001)</label>
               <input type="text" id="mc" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="ec" className="col-6">Engineering Chemistry</label>
+              <label htmlFor="ec" className="col-6">Engineering Chemistry (60 CH 004)</label>
               <input type="text" id="ec" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="eg" className="col-6">Engineering Graphics</label>
+              <label htmlFor="eg" className="col-6">Engineering Graphics (60 ME 002)</label>
               <input type="text" id="eg" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="cp" className="col-6">C Programming</label>
+              <label htmlFor="cp" className="col-6">C Programming (60 CS 001)</label>
               <input type="text" id="cp" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="freLab" className="col-6">FRE Lab</label>
+              <label htmlFor="freLab" className="col-6">FRE Lab (60 ME 0P1)</label>
               <input type="text" id="freLab" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="cLab" className="col-6">CP Lab</label>
+              <label htmlFor="cLab" className="col-6">CP Lab (60 CS 0P1)</label>
               <input type="text" id="cLab" className="col-6 rounded border border-dark" />
             </div>
           </div>
@@ -110,14 +142,27 @@ function SemOne() {
         </div>
       </div>
       <div className="d-flex justify-content-center flex-column align-items-center">
-        {cgpa !== null && (
+        {sgpa !== null && (
           <div className="text-center mt-3">
-            <h5>Your CGPA is: {cgpa}</h5>
+            <h5>Your SGPA is: {sgpa}</h5>
           </div>
         )}
-        <p onClick={handleCalculate} className="btn btn-outline-primary mt-3">
-          Calculate
-        </p>
+        <div className="d-flex gap-5">
+          <button className="btn btn-outline-secondary mt-3 d-flex align-items-center disabled"><ion-icon name="arrow-back-outline"></ion-icon></button>
+          <button onClick={handleCalculate} className="btn btn-outline-primary mt-3">
+            Calculate SGPA
+          </button>
+          <button onClick={nextSemPage} className="btn btn-outline-primary mt-3 d-flex align-items-center"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+        </div>
+        <button 
+          onClick={calculateCgpa} 
+          className="btn btn-outline-primary mt-3 mb-4" 
+          data-bs-toggle="popover" 
+          data-bs-content={cgpa ? `CGPA: ${cgpa}` : "No SGPAs calculated yet."} 
+          data-bs-placement="top"
+        >
+          Calculate CGPA upto this Semester
+        </button>
       </div>
     </section>
   );

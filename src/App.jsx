@@ -11,12 +11,13 @@ import SemSix from './components/SemSix.jsx';
 import SemSeven from './components/SemSeven.jsx';
 import SemEight from './components/SemEight.jsx';
 import ParticlesComponent from './components/ParticlesComponent.jsx';
+import { SgpaProvider } from './components/SgpaContext.jsx';
 
 function App() {
   const location = useLocation();  // Use location for route-specific animations
 
   return (
-    <>
+    <SgpaProvider>
       <ParticlesComponent id="particlesBG" />
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
@@ -68,7 +69,7 @@ function App() {
           
         </Routes>
       </AnimatePresence>
-    </>
+    </SgpaProvider>
   );
 }
 

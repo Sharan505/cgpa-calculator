@@ -1,7 +1,16 @@
-import React, { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { SgpaContext } from './SgpaContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 function SemSeven() {
-  const [cgpa, setCgpa] = useState(null); 
+  const [sgpa, setSgpa] = useState(null); 
+  const [cgpa, setCgpa] = useState(null);
+  const { sgpaList, addSgpa } = useContext(SgpaContext);
+  const navigate = useNavigate();
+
   const gr = {
     'O': 10,
     'A+': 9,
@@ -59,12 +68,44 @@ function SemSeven() {
     }
 
     if (totalCredits > 0) {
-      const calculatedCgpa = (totalPoints / totalCredits).toFixed(2);
-      setCgpa(calculatedCgpa);
+      const calculatedSgpa = (totalPoints / totalCredits).toFixed(2);
+      setSgpa(calculatedSgpa);
+      addSgpa(parseFloat(calculatedSgpa));
     } else {
-      setCgpa("Invalid input. Please enter valid grades."); // Handle case with no valid grades
+      setSgpa("Invalid input. Please enter valid grades.");
     }
   }
+
+
+  function calculateCgpa() {
+    if (sgpaList.length === 0) {
+      return "No SGPAs calculated yet.";
+    }
+
+    const totalSgpa = sgpaList.reduce((acc, curr) => acc + curr, 0);
+    const cgpaValue = (totalSgpa / sgpaList.length).toFixed(2);
+    
+    setCgpa(cgpaValue);
+    return cgpaValue;
+  }
+
+
+  const nextSemPage = () => {
+    navigate("/sem-eight");
+  }
+  const prevSemPage = () => {
+    navigate("/sem-six");
+  }
+
+
+  useEffect(() => {
+    const popoverTrigger = document.querySelector('[data-bs-toggle="popover"]');
+    if (popoverTrigger) {
+      new window.bootstrap.Popover(popoverTrigger);
+    }
+  }, [cgpa]);
+
+
 
   return (
     <section>
@@ -72,7 +113,7 @@ function SemSeven() {
         <h2>K.S.Rangasamy College of Technology</h2>
         <h4>Department of Information Technology</h4>
       </nav>
-      <p className="text-center display-6 mt-4">CGPA Calculator (Semester 7)</p>
+      <p className="text-center display-6 mt-4">SGPA Calculator (Semester 7)</p>
       <p className="text-center">
         <strong>NOTE:</strong> Enter the Grade <strong>(in capital letters)</strong> correctly to the corresponding subject!
       </p>
@@ -81,23 +122,23 @@ function SemSeven() {
           <div className="col-md-3 col-sm-1"></div>
           <div className="col-md-6 col-sm-10">
             <div className="row mt-4 me-2">
-              <label htmlFor="mc" className="col-6">Mobile Communication</label>
+              <label htmlFor="mc" className="col-6">Mobile Communication (60 IT 701)</label>
               <input type="text" id="mc" className="col-6 rounded border border-dark" />                            
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="cns" className="col-6">Cryptography and Network Security</label>
+              <label htmlFor="cns" className="col-6">Cryptography and Network Security (60 IT 702)</label>
               <input type="text" id="cns" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="cc" className="col-6">Cloud Computing</label>
+              <label htmlFor="cc" className="col-6">Cloud Computing (60 IT 703)</label>
               <input type="text" id="cc" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="cg" className="col-6">Computer Graphics and Virtual Reality</label>
+              <label htmlFor="cg" className="col-6">Computer Graphics and Virtual Reality (60 IT 704)</label>
               <input type="text" id="cg" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="st" className="col-6">Software Testing</label>
+              <label htmlFor="st" className="col-6">Software Testing (60 IT 705)</label>
               <input type="text" id="st" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
@@ -109,11 +150,11 @@ function SemSeven() {
               <input type="text" id="oe" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="ccLab" className="col-6">Cloud Computing Laboratory </label>
+              <label htmlFor="ccLab" className="col-6">Cloud Computing Laboratory (60 IT 7P1)</label>
               <input type="text" id="ccLab" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="pLab" className="col-6">Project Work Phase – I</label>
+              <label htmlFor="pLab" className="col-6">Project Work Phase – I (60 IT 7P2)</label>
               <input type="text" id="pLab" className="col-6 rounded border border-dark" />
             </div>
           </div>
@@ -121,14 +162,27 @@ function SemSeven() {
         </div>
       </div>
       <div className="d-flex justify-content-center flex-column align-items-center">
-        {cgpa !== null && (
+        {sgpa !== null && (
           <div className="text-center mt-3">
-            <h5>Your CGPA is: {cgpa}</h5>
+            <h5>Your SGPA is: {sgpa}</h5>
           </div>
         )}
-        <p onClick={handleCalculate} className="btn btn-outline-primary mt-3">
-          Calculate
-        </p>
+        <div className="d-flex gap-5 mb-4">
+          <button onClick={prevSemPage} className="btn btn-outline-primary mt-3 d-flex align-items-center"><ion-icon name="arrow-back-outline"></ion-icon></button>
+          <button onClick={handleCalculate} className="btn btn-outline-primary mt-3">
+            Calculate SGPA
+          </button>
+          <button onClick={nextSemPage} className="btn btn-outline-primary mt-3 d-flex align-items-center"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+        </div>
+        <button 
+          onClick={calculateCgpa} 
+          className="btn btn-outline-primary mt-3 mb-4" 
+          data-bs-toggle="popover" 
+          data-bs-content={cgpa ? `CGPA: ${cgpa}` : "No SGPAs calculated yet."} 
+          data-bs-placement="top"
+        >
+          Calculate CGPA upto this Semester
+        </button>
       </div>
     </section>
   );
