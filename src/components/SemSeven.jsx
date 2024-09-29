@@ -122,11 +122,11 @@ function SemSeven() {
           <div className="col-md-3 col-sm-1"></div>
           <div className="col-md-6 col-sm-10">
             <div className="row mt-4 me-2">
-              <label htmlFor="mc" className="col-6">Mobile Communication (60 IT 701)</label>
+              <label htmlFor="mc" className="col-6">Mobile Communication <strong>(60 IT 701)</strong></label>
               <input type="text" id="mc" className="col-6 rounded border border-dark" />                            
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="cns" className="col-6">Cryptography and Network Security (60 IT 702)</label>
+              <label htmlFor="cns" className="col-6">Cryptography and Network Security <strong>(60 IT 702)</strong></label>
               <input type="text" id="cns" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
@@ -134,11 +134,11 @@ function SemSeven() {
               <input type="text" id="cc" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="cg" className="col-6">Computer Graphics and Virtual Reality (60 IT 704)</label>
+              <label htmlFor="cg" className="col-6">Computer Graphics and Virtual Reality <strong>(60 IT 704)</strong></label>
               <input type="text" id="cg" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="st" className="col-6">Software Testing (60 IT 705)</label>
+              <label htmlFor="st" className="col-6">Software Testing <strong>(60 IT 705)</strong></label>
               <input type="text" id="st" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
@@ -150,11 +150,11 @@ function SemSeven() {
               <input type="text" id="oe" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="ccLab" className="col-6">Cloud Computing Laboratory (60 IT 7P1)</label>
+              <label htmlFor="ccLab" className="col-6">Cloud Computing Laboratory <strong>(60 IT 7P1)</strong></label>
               <input type="text" id="ccLab" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="pLab" className="col-6">Project Work Phase – I (60 IT 7P2)</label>
+              <label htmlFor="pLab" className="col-6">Project Work Phase – I <strong>(60 IT 7P2)</strong></label>
               <input type="text" id="pLab" className="col-6 rounded border border-dark" />
             </div>
           </div>

@@ -103,7 +103,7 @@ function SemEight() {
               <input type="text" id="e" className="col-6 rounded border border-dark" />                            
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="p" className="col-6">Project Work Phase - II (60 IT 8P1)</label>
+              <label htmlFor="p" className="col-6">Project Work Phase - II <strong>(60 IT 8P1)</strong></label>
               <input type="text" id="p" className="col-6 rounded border border-dark" />
             </div>
           </div>

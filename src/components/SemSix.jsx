@@ -119,19 +119,19 @@ function SemSix() {
           <div className="col-md-3 col-sm-1"></div>
           <div className="col-md-6 col-sm-10">
             <div className="row mt-4 me-2">
-              <label htmlFor="eefa" className="col-6">Engineering Economics and Financial Accounting (60 HS 002)</label>
+              <label htmlFor="eefa" className="col-6">Engineering Economics and Financial Accounting <strong>(60 HS 002)</strong></label>
               <input type="text" id="eefa" className="col-6 rounded border border-dark" />                            
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="dm" className="col-6">Data Mining and Analytics (60 IT 601)</label>
+              <label htmlFor="dm" className="col-6">Data Mining and Analytics <strong>(60 IT 601)</strong></label>
               <input type="text" id="dm" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="fd" className="col-6">Full Stack Development (60 IT 602)</label>
+              <label htmlFor="fd" className="col-6">Full Stack Development <strong>(60 IT 602)</strong></label>
               <input type="text" id="fd" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="ml" className="col-6">Machine Learning (60 IT 603)</label>
+              <label htmlFor="ml" className="col-6">Machine Learning <strong>(60 IT 603)</strong></label>
               <input type="text" id="ml" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
@@ -143,11 +143,11 @@ function SemSix() {
               <input type="text" id="oe" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="dmLab" className="col-6">Data Mining and Analytics Laboratory (60 IT 6P1)</label>
+              <label htmlFor="dmLab" className="col-6">Data Mining and Analytics Laboratory <strong>(60 IT 6P1)</strong></label>
               <input type="text" id="dmLab" className="col-6 rounded border border-dark" />
             </div>
             <div className="row mt-4 me-2">
-              <label htmlFor="fdLab" className="col-6">Full Stack Development Laboratory (60 IT 6P2 )</label>
+              <label htmlFor="fdLab" className="col-6">Full Stack Development Laboratory <strong>(60 IT 6P2 )</strong></label>
               <input type="text" id="fdLab" className="col-6 rounded border border-dark" />
             </div>
           </div>
