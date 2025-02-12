@@ -31,7 +31,6 @@ function SemFive() {
     'dt': 3,
     'e1': 3,
     'oe': 3,
-    'strt': 2,
     'osLab': 2,
     'cnLab': 2,
   };
@@ -43,7 +42,7 @@ function SemFive() {
     const dt = document.getElementById('dt').value;
     const e1 = document.getElementById('e1').value;
     const oe = document.getElementById('oe').value;
-    const strt = document.getElementById('strt').value;
+    // const strt = document.getElementById('strt').value;
     const osLab = document.getElementById('osLab').value;
     const cnLab = document.getElementById('cnLab').value;
 
@@ -54,7 +53,7 @@ function SemFive() {
       'dt': dt,
       'e1': e1,
       'oe': oe,
-      'strt': strt,
+      // 'strt': strt,
       'osLab': osLab,
       'cnLab': cnLab,
     };
@@ -129,7 +128,7 @@ function SemFive() {
             <GradeSelector id="dt" label="Design Thinking (60 IT 003)" />
             <GradeSelector id="e1" label="Elective – I" />
             <GradeSelector id="oe" label="Open Elective – II" />
-            <GradeSelector id="strt" label="Start-ups and Entrepreneurship (60 MY 003)" />
+            {/* <GradeSelector id="strt" label="Start-ups and Entrepreneurship (60 MY 003)" /> */}
             <GradeSelector id="osLab" label="OS Lab (60 IT 5P1)" />
             <GradeSelector id="cnLab" label="CN Lab (60 IT 5P2)" />
           </div>

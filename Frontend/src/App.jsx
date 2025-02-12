@@ -8,9 +8,6 @@ import InitialPage from './components/InitialPage.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-import SignUp from './SignUp.jsx';
-import LogIn from './LogIn.jsx';
-
 // IT
 import HomeIt from './components/itt/HomeIt.jsx';
 import SemOne from './components/itt/SemOne.jsx';
@@ -41,23 +38,8 @@ function App() {
       <ParticlesComponent id="particlesBG" />
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Navigate to="/login" />} />
-          <Route
-            path="/login"
-            element={
-              <PageWrapper>
-                <LogIn />
-              </PageWrapper>
-            }
-          />
-          <Route
-            path="/signup"
-            element={
-              <PageWrapper>
-                <SignUp />
-              </PageWrapper>
-            }
-          />
+          <Route path="/" element={<Navigate to="/initial" />} />
+          
           <Route
             path="/initial"
             element={
