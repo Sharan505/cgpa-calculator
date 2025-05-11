@@ -27,7 +27,7 @@ function HomeIt(){
                     <div className="col-md-3 col-sm-0"></div>
                 </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <hr className="mx-5 text-secondary"/><br />
-                <footer className="row">
+                {/* <footer className="row">
                     <p className="text-end pe-5 col-6" id="sign">Developed by Sharan M <br />IT 3rd year</p>
                     <div className="col-6 d-flex justify-content-start gap-4 icons">
                         <a id="linkedin" href="https://www.linkedin.com/in/sharan-m-18274932b/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BwLKD%2F7MJTgKqcPbfqmoKag%3D%3D" target="_blank" rel="noopener noreferrer">
@@ -43,7 +43,7 @@ function HomeIt(){
                             <ion-icon name="mail-outline"></ion-icon>
                         </a>
                     </div>
-                </footer>
+                </footer> */}
         </section>
     )
 }
