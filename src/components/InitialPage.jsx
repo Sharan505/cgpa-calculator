@@ -40,7 +40,7 @@ function InitialPage() {
                     </ul>
                 </div>
             </div>
-            <footer className="row mb-4">
+            {/* <footer className="row mb-4">
                 <p className="text-end pe-5 col-6 mb-0" id="sign">Developed by Sharan M <br />IT 3rd year</p>
                 <div className="col-6 d-flex justify-content-start gap-4 icons">
                     <a id="linkedin" href="https://www.linkedin.com/in/sharan-m-18274932b/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BwLKD%2F7MJTgKqcPbfqmoKag%3D%3D" target="_blank" rel="noopener noreferrer">
@@ -56,7 +56,7 @@ function InitialPage() {
                         <ion-icon name="mail-outline"></ion-icon>
                     </a>
                 </div>
-            </footer>
+            </footer> */}
         </div>
     );
 }
