@@ -38,7 +38,7 @@ function App() {
       <ParticlesComponent id="particlesBG" />
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Navigate to="/initial" />} />
+          <Route path="/" element={<Navigate to="/it-dept" />} />
           
           <Route
             path="/initial"
