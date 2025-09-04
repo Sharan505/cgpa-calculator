@@ -123,7 +123,7 @@ function SemSix() {
             <GradeSelector id="dm" label="Data Mining and Analytics (60 IT 601)" />
             <GradeSelector id="fd" label="Full Stack Development (60 IT 602)" />
             <GradeSelector id="ml" label="Machine Learning (60 IT 603)" />
-            <GradeSelector id="e2" label="Elective – II" />
+            <GradeSelector id="e1" label="Elective – II" />
             <GradeSelector id="oe" label="Open Elective – III" />
             <GradeSelector id="dmLab" label="Data Mining and Analytics Laboratory (60 IT 6P1)" />
             <GradeSelector id="fdLab" label="Full Stack Development Laboratory (60 IT 6P2)" />
